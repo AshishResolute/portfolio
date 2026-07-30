@@ -1,16 +1,33 @@
 import { GrContact } from "react-icons/gr";
-
-
-export const NavBar = ({userName})=>{
+import { VscMenu } from "react-icons/vsc";
+import { AiOutlineClose } from "react-icons/ai";
+export const NavBar = ({userName,navModal,setNavModal})=>{
     return (
-        <nav id="nav-bar">
-            <h2>{userName}</h2>
-            <ol style={{listStyleType:"none"}} id="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-            </ol>
-            <GrContact />
-        </nav>
+      <nav className=" p-5 flex justify-between items-center gap-2 font-googlesans">
+        <h1 className="font-bold text-2xl hover:text-[#6320EE] transition-colors duration-300">{userName}</h1>
+        <ul className="hidden md:flex gap-4" text-xl>
+            <li>Home</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+        <GrContact className="hidden md:flex" />
+        <button onClick={()=>setNavModal(!navModal)} className="md:hidden"><VscMenu  /></button>
+      </nav> 
+    )
+}
+
+
+export const NavModal = ({navModal,setNavModal})=>{
+    return(
+        <div className="md:hidden fixed inset-0 bg-black/50 opacity-sm flex justify-center items-center">
+            <div className="border-2 border-white  max-[450px]:fixed max-[450px]:inset-0 absolute right-0 top-0 bottom-0  min-[451px]:w-[35%] backdrop-blur-2xl flex flex-col items-center gap-5">
+                <button onClick={()=>setNavModal(!navModal)} className="absolute top-0 right-0 m-4 hover:cursor-pointer"><AiOutlineClose/></button>
+                <ul className=" w-full pt-2 text-center mt-12">
+                    <li  className="mb-4 pb-2  hover:cursor-pointer hover:text-[#6320EE]  transition-colors duration-300 ">Home</li>
+                    <li className="mb-4 pb-2 transition-colors hover:text-[#6320EE] hover:cursor-pointer duration-300">Projects</li>
+                    <li className="mb-4 pb-2 transition-colors hover:text-[#6320EE]  hover:cursor-pointer duration-300">About</li>
+                </ul>
+            </div>
+        </div>
     )
 }
