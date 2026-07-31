@@ -8,6 +8,7 @@ export const NavBar = ({userName,navModal,setNavModal})=>{
         <ul className="hidden md:flex gap-4" text-xl>
             <li>Home</li>
             <li>Projects</li>
+            <li>About</li>
             <li>Contact</li>
         </ul>
         <GrContact className="hidden md:flex" />
@@ -26,6 +27,7 @@ export const NavModal = ({navModal,setNavModal})=>{
                     <li  className="mb-4 pb-2  hover:cursor-pointer hover:text-[#6320EE]  transition-colors duration-300 ">Home</li>
                     <li className="mb-4 pb-2 transition-colors hover:text-[#6320EE] hover:cursor-pointer duration-300">Projects</li>
                     <li className="mb-4 pb-2 transition-colors hover:text-[#6320EE]  hover:cursor-pointer duration-300">About</li>
+                    <li className="mb-4 pb-2 transition-colors hover:text-[#6320EE]  hover:cursor-pointer duration-300">Contact</li>
                 </ul>
             </div>
         </div>
