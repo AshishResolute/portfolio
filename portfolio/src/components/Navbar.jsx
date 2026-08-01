@@ -3,7 +3,7 @@ import { VscMenu } from "react-icons/vsc";
 import { AiOutlineClose } from "react-icons/ai";
 export const NavBar = ({userName,navModal,setNavModal})=>{
     return (
-      <nav className=" p-5 flex justify-between items-center gap-2 font-googlesans">
+      <nav className=" p-5 flex justify-between items-center gap-2 font-sora">
         <h1 className="font-bold text-2xl hover:text-[#6320EE] transition-colors duration-300">{userName}</h1>
         <ul className="hidden md:flex gap-4" text-xl>
             <li>Home</li>

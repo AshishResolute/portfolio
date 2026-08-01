@@ -1,13 +1,15 @@
 import "./index.css"
 import { useState } from "react"
 import { NavBar,NavModal } from "./components/Navbar.jsx"
+import { Hero } from "./components/main.jsx"
 
 let App = ()=>{
   const [navModal,setNavModal]=useState(false)
   return(
-    <div className="min-h-screen  text-[#1E2022]">
+    <div className="h-screen  text-[#1E2022] flex flex-col font-sora">
       {navModal&&<NavModal navModal={navModal} setNavModal={setNavModal}/>}
-        <NavBar userName="Ashish Gourh" navModal={navModal} setNavModal={setNavModal}/>
+        <NavBar userName="Ashish." navModal={navModal} setNavModal={setNavModal}/>
+        <Hero userName="Ashish."/>
     </div>
   )
 }
