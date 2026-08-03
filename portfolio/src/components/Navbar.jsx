@@ -5,7 +5,7 @@ export const NavBar = ({userName,navModal,setNavModal})=>{
     return (
       <nav className=" p-5 flex justify-between items-center gap-2 font-sora">
         <h1 className="font-bold text-2xl hover:text-[#6320EE] transition-colors duration-300">{userName}</h1>
-        <ul className="hidden md:flex gap-4" text-xl>
+        <ul className="hidden md:flex gap-4">
             <li>Home</li>
             <li>Projects</li>
             <li>About</li>

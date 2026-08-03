@@ -1,6 +1,12 @@
+import { PiPiggyBankFill } from "react-icons/pi";
+import { TbUsersGroup } from "react-icons/tb";
+import { IoStatsChart } from "react-icons/io5";
+
+
+
 export const projects = [
   {
-    icon: "PiPiggyBankFill",
+    icon: PiPiggyBankFill,
     title: "BankApi",
     description:
       "Banking backend with row-level locking,rate limiting, and refresh-token rotation.",
@@ -9,7 +15,7 @@ export const projects = [
     githubSrc:"https://github.com/AshishResolute/bankapi"
   },
   {
-    icon: "Social App",
+    icon: TbUsersGroup,
     title: "SocialBuzz",
     description:
       "Social media backend — auth, caching, and notifications, fully migrated to TypeScript with tests.",
@@ -18,7 +24,7 @@ export const projects = [
     githubSrc:"https://github.com/AshishResolute/socialBuzz"
   },
   {
-    icon: "Job",
+    icon: IoStatsChart,
     title: "Job Tracker",
     description:
       "Full-stack job application tracker — React frontend backed by a Node/TS/Postgres API.",
