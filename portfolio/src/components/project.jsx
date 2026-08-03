@@ -6,7 +6,7 @@ export const Projects = ()=>{
     return (
         <div className=" p-8 space-y-3 text-[#6b6b68]">
             <ProjectSectionHeader/>
-            <div className="grid grid-cols-2 gap-4">{projects.map((data)=><ProjectCard key={data.title} icon={data.icon} title={data.title} description={data.description} githubSrc={data.githubSrc}/>)}</div>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">{projects.map((data)=><ProjectCard key={data.title} icon={data.icon} title={data.title} description={data.description} githubSrc={data.githubSrc}/>)}</div>
         </div>
     )
 }
