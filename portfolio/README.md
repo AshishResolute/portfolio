@@ -27,8 +27,8 @@ A single-page portfolio site with a hero section styled like a mock API request/
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/AshishResolute/<portfolio>.git
-cd <portfolio>
+git clone https://github.com/AshishResolute/portfolio.git
+cd portfolio
 npm install
 ```
 
