@@ -3,7 +3,7 @@ import { projects } from "../data/projects.data.js";
 
 export const Projects = () => {
   return (
-    <div className=" p-8 space-y-8 text-[#6b6b68]">
+    <div className=" p-8 space-y-8 text-[#6b6b68]" id="projects">
       <ProjectSectionHeader />
       <div className="grid md:grid-cols-2 grid-cols-1  md:grid-rows-2 gap-4 ">
         {projects.map((data) => (

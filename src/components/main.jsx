@@ -1,7 +1,10 @@
 export const Hero = ({ userName }) => {
   return (
     // use flex-1 so that this div take the remaining space after nav as min-h-screen added a scroll bar
-    <div className=" flex flex-col   md:flex-row md:items-center   text-[#6b6b68] p-8 overflow-y-auto">
+    <div
+      className=" flex flex-col   md:flex-row md:items-center   text-[#6b6b68] p-8 overflow-y-auto"
+      id="hero"
+    >
       <div className="space-y-3  p-4">
         <h2>Hey,I'm {userName}</h2>
         <h1 className="text-[#d85a30] text-3xl">
@@ -11,12 +14,27 @@ export const Hero = ({ userName }) => {
           I build reliable APIs and backend systems — from auth flows to rate
           limiting — for products people actually use.
         </p>
-        <button className="rounded border px-3 py-2 mr-1  text-black hover:bg-black hover:text-white transition-colors duration-300">
+        {/* <button className="rounded border px-3 py-2 mr-1  text-black hover:bg-black hover:text-white transition-colors duration-300">
           Get in Touch
-        </button>
-        <button className="rounded border px-3 py-2 text-white bg-black hover:bg-white hover:text-black transition-colors duration-300">
+        </button> */}
+        {/* button  swallows a tags click so had to remove buttons*/}
+        {/* <a href="#projects">
+          <button className="rounded border px-3 py-2 text-white bg-black hover:bg-white hover:text-black transition-colors duration-300">
+            View Projects
+          </button>
+        </a> */}
+        <a
+          href="#"
+          className=" mr-1.5 inline-block rounded border px-3 py-2 text-white bg-black hover:bg-white hover:text-black transition-colors duration-300"
+        >
+          Get in Touch
+        </a>
+        <a
+          href="#projects"
+          className="inline-block rounded border px-3 py-2 text-white bg-black hover:bg-white hover:text-black transition-colors duration-300"
+        >
           View Projects
-        </button>
+        </a>
       </div>
       <CodeCard />
     </div>
