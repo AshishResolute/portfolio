@@ -1,16 +1,72 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal developer portfolio — built to showcase backend projects, skills, and how to get in touch.
 
-Currently, two official plugins are available:
+**Live site:** [portfolio-8z5j.vercel.app](https://portfolio-8z5j.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+A single-page portfolio site with a hero section styled like a mock API request/response, a projects grid, and (in progress) an about and contact section.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** (Vite)
+- **react-icons** for iconography
+- **Sora** font
+- Deployed on **Vercel**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Hero section with a live-looking API call/response code card
+- Reusable `ProjectCard` component driven by a projects data array (icon, title, description, tech tags)
+- Responsive layout
+- Clean, minimal dark theme
+
+## Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/AshishResolute/portfolio.git
+cd portfolio
+npm install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+  components/
+    main.jsx
+    NavBar.jsx
+    ProjectCard.jsx
+  data/
+    projects.js
+  App.jsx
+  main.jsx
+```
+
+## Roadmap
+
+- [ ] About section
+- [ ] Contact section / form
+- [ ] Individual project detail pages
+- [ ] Tech tag badges on project cards
+- [ ] Custom domain
+
+## Contact
+
+- GitHub: [AshishResolute](https://github.com/AshishResolute)
+- Email: ashishresolute@gmail.com
