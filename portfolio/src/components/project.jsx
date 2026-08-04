@@ -5,7 +5,7 @@ export const Projects = () => {
   return (
     <div className=" p-8 space-y-5 text-[#6b6b68]">
       <ProjectSectionHeader />
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-4 md:grid-rows-2 gap-4">
         {projects.map((data) => (
           <ProjectCard
             key={data.title}
@@ -16,7 +16,7 @@ export const Projects = () => {
             tags={data.tags}
           />
         ))}
-        <div className="bg-black border p-4 rounded-2xl space-y-1 md:h-52  shadow-xl shadow-black/50 hover:shadow-gray-300 hover:text-xl transition-all hover:text-gray-300  transform hover:-translate-y-1 duration-400  text-gray-400 h-[53]">
+        <div className="bg-black border p-4 rounded-2xl space-y-1 md:h-52  shadow-xl shadow-black/50 hover:shadow-gray-300 hover:text-xl transition-all hover:text-gray-300  transform hover:-translate-y-1 duration-400  text-gray-400 h-[53] flex justify-center items-center">
           <p>More coming soon</p>
         </div>
       </div>
@@ -49,7 +49,7 @@ const ProjectCard = ({
     <a href={githubSrc}>
       <div
         key={name}
-        className="bg-black border p-4 rounded-2xl space-y-1 md:h-52 h-[53] shadow-xl shadow-black/50 hover:shadow-gray-300 transition transform hover:-translate-y-1 duration-400"
+        className="bg-black border p-4 rounded-2xl space-y-1 md:h-52  shadow-xl shadow-black/50 hover:shadow-gray-300 transition transform hover:-translate-y-1 duration-400"
       >
         <div className="flex justify-between space-y-1">
           <Icon />
