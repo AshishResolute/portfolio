@@ -25,7 +25,7 @@ export const Hero = ({ userName }) => {
 
 const CodeCard = () => {
   return (
-    <div className="border border-slate-200 bg-black rounded-2xl flex-1">
+    <div className="border border-slate-200 bg-black rounded-2xl flex-1 text-gray-50">
       <div className="flex gap-2 p-4 ">
         <span className="rounded-[50%] bg-red-300 inline-block w-2 h-2 "></span>
         <span className="rounded-[50%] bg-yellow-300 inline-block w-2 h-2"></span>
