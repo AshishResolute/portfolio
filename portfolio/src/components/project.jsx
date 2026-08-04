@@ -3,9 +3,9 @@ import { projects } from "../data/projects.data.js";
 
 export const Projects = () => {
   return (
-    <div className=" p-8 space-y-5 text-[#6b6b68]">
+    <div className=" p-8 space-y-8 text-[#6b6b68]">
       <ProjectSectionHeader />
-      <div className="grid md:grid-cols-2 grid-cols-1 grid-rows-4 md:grid-rows-2 gap-4">
+      <div className="grid md:grid-cols-2 grid-cols-1  md:grid-rows-2 gap-4 ">
         {projects.map((data) => (
           <ProjectCard
             key={data.title}
@@ -16,7 +16,7 @@ export const Projects = () => {
             tags={data.tags}
           />
         ))}
-        <div className="bg-black border p-4 rounded-2xl space-y-1 md:h-52  shadow-xl shadow-black/50 hover:shadow-gray-300 hover:text-xl transition-all hover:text-gray-300  transform hover:-translate-y-1 duration-400  text-gray-400 h-[53] flex justify-center items-center">
+        <div className="bg-black  border p-4 rounded-2xl  min-h-52 min-h-[450px]:h-56    shadow-xl shadow-black/50 hover:shadow-gray-300 hover:text-xl transition-all hover:text-gray-300  transform hover:-translate-y-1 duration-400  text-gray-400 flex justify-center items-center ">
           <p>More coming soon</p>
         </div>
       </div>
@@ -49,22 +49,27 @@ const ProjectCard = ({
     <a href={githubSrc}>
       <div
         key={name}
-        className="bg-black border p-4 rounded-2xl space-y-1 md:h-52  shadow-xl shadow-black/50 hover:shadow-gray-300 transition transform hover:-translate-y-1 duration-400"
+        className="bg-black border p-4 pb-5 rounded-2xl space-y-1  md:min-h-52 min-h-[450px]:h-56  shadow-xl shadow-black/50 hover:shadow-gray-300 transition transform hover:-translate-y-1 duration-400"
       >
         <div className="flex justify-between space-y-1">
           <Icon />
-          <a href={githubSrc} title="View GitHub Repository">
+          {/* <a href={githubSrc} title="View GitHub Repository">
             <ImGithub className=" inline-block transform hover:scale-150 duration-400 " />
-          </a>
+          </a> */}
         </div>
         <div className="space-y-1.5 md:space-y-2.5 ">
           <h2 className="text-xl text-white">{title}</h2>
           <p className="text-sm text-gray-400">{description}</p>
-          {tags.map((tag, index) => (
-            <button className="border border-gray p-1 ml-1 rounded-xl hover:border-black hover:text-white hover:bg-gray-600 transition-colors duration-300">
-              {tag}
-            </button>
-          ))}
+          <div className="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <button
+                key={tag}
+                className="border border-gray p-1 rounded-xl hover:border-black hover:text-white hover:bg-gray-600 transition-colors duration-300"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </a>
