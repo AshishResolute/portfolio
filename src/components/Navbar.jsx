@@ -8,7 +8,7 @@ export const NavBar = ({userName,navModal,setNavModal})=>{
         <ul className="hidden md:flex gap-4">
             <a href="#hero"><li>Home</li></a>
             <a href="#projects"><li>Projects</li></a>
-            <li>About</li>
+            <a href="#about"><li>About</li></a>
             <li>Contact</li>
         </ul>
         <GrContact className="hidden md:flex" />

@@ -2,7 +2,7 @@ import {aboutMeData,skills} from '../data/projects.data.js'
 
 export const  AboutSection = ()=>{
     return(
-        <div className="p-8 text-[#6b6b68] space-y-8">
+        <div className="p-8 text-[#6b6b68] space-y-8" id="about">
             <AboutSectionHeader/>
             <div className='flex flex-col md:flex-row md: gap-4 justify-around'>
             <AboutSectionContent/>
@@ -36,7 +36,7 @@ const AboutSectionContent = ()=>{
 
 const ExpAndLocation = ()=>{
     return(
-        <div className="flex gap-4 text-center  ">
+        <div className="flex gap-4 text-center max-[349px]:flex-col">
             <div >
                 <p className="text-gray-300 text-xl">{aboutMeData[2].exp}</p>
                 <p className='text-center'>months building</p>
@@ -70,7 +70,7 @@ const SkillsSection = ()=>{
             </div>
             <div className='flex flex-col items-center mt-3 space-y-2'>
                 <p>Find my Resume here</p>
-                <a href="../../../public/Resume.pdf" target="_blank" rel="noopener noreferrer"><span className='cursor-pointer px-3 py-1 border border-gray-500 rounded-xl hover:text-white hover:bg-black hover:text-lg transition-all duration-300 '>View Resume</span></a>
+                <a href="../../../Resume.pdf" target="_blank" rel="noopener noreferrer"><span className='cursor-pointer px-3 py-1 border border-gray-500 rounded-xl hover:text-white hover:bg-black hover:text-lg transition-all duration-300 '>View Resume</span></a>
             </div>
         </div>
     )
