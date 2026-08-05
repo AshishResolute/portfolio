@@ -36,7 +36,7 @@ const AboutSectionContent = ()=>{
 
 const ExpAndLocation = ()=>{
     return(
-        <div className="flex gap-4 text-center ">
+        <div className="flex gap-4 text-center  ">
             <div >
                 <p className="text-gray-300 text-xl">{aboutMeData[2].exp}</p>
                 <p className='text-center'>months building</p>
@@ -60,17 +60,17 @@ const SkillsSection = ()=>{
                 <p className='text-gray-700'>BACKEND</p>
                 <InlineSkillsSpan data={skills.backend}/>
             </div>
-            <div>
-                <p className='text-gray-700'>AUTH & SECURITY</p>
+            <div className='space-y-1.5'>
+                <p className='text-gray-700 '>AUTH & SECURITY</p>
                 <InlineSkillsSpan data={skills.auth}/>
             </div>
-            <div>
-                <p className='text-gray-700'>ALSO USING</p>
+            <div className='space-y-1.5'>
+                <p className='text-gray-700 '>ALSO USING</p>
                 <InlineSkillsSpan data={skills.also}/>
             </div>
-            <div>
-                <p>Find me Resume here</p>
-                <button>Resume</button>
+            <div className='flex flex-col items-center mt-3 space-y-2'>
+                <p>Find my Resume here</p>
+                <a href="../../../public/Resume.pdf" target="_blank" rel="noopener noreferrer"><span className='cursor-pointer px-3 py-1 border border-gray-500 rounded-xl hover:text-white hover:bg-black hover:text-lg transition-all duration-300 '>View Resume</span></a>
             </div>
         </div>
     )
