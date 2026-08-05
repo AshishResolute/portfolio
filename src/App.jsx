@@ -3,8 +3,9 @@ import { useState } from "react"
 import { NavBar,NavModal } from "./components/Navbar.jsx"
 import { Hero } from "./components/main.jsx"
 import { Projects } from "./components/project.jsx"
+import { AboutSection } from "./components/About.jsx"
 
-let App = ()=>{
+const App = ()=>{
   const [navModal,setNavModal]=useState(false)
   return(
     <div className="  text-[#1E2022] flex flex-col font-sora overflow-auto">
@@ -12,6 +13,7 @@ let App = ()=>{
         <NavBar userName="Ashish." navModal={navModal} setNavModal={setNavModal}/>
         <Hero userName="Ashish."/>
         <Projects/>
+        <AboutSection/>
     </div>
   )
 }

@@ -40,3 +40,12 @@ export const projects = [
     githubSrc:"https://github.com/AshishResolute/Tracker_FrontEnd"
   },
 ];
+
+
+export const  aboutMeData = ["I'm a self-taught backend developer based in Bengaluru, currently finishing my final year of a B.Tech in Mechanical Engineering at UVCE. I started programming a little over a year ago — no bootcamp, no CS degree, just building things until they worked, then rebuilding them until they worked well.","Most of my time goes into backend systems — auth flows, rate limiting, caching, the kind of plumbing that's invisible when it's done right. I like the problems where getting it \"almost working\" isn't good enough.",{exp:17,projectsShipped:3,location:"Bengaluru"}]
+
+export const skills={
+  backend:["Node.js","TypeScript","JavaScript","Express","PostgreSQL","Redis","Prisma","Docker"],
+  auth:["JWT","OAuth 2.0","RBAC","bcrypt"],
+  also:["React","Tailwind CSS","BullMQ"]
+}
