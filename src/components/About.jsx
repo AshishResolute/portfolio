@@ -2,7 +2,7 @@ import {aboutMeData,skills} from '../data/projects.data.js'
 
 export const  AboutSection = ()=>{
     return(
-        <div className="p-8 text-[#6b6b68] space-y-8" id="about">
+        <div className="p-8 pb-4 text-[#6b6b68] space-y-8" id="about">
             <AboutSectionHeader/>
             <div className='flex flex-col md:flex-row md: gap-4 justify-around'>
             <AboutSectionContent/>

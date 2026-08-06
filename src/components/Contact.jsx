@@ -5,7 +5,7 @@ import { contactDetails } from "../data/projects.data.js";
 
 export const Contact = () => {
   return (
-    <div className=" text-[#6b6b68] space-y-4 p-8">
+    <div className=" text-[#6b6b68] space-y-4 p-8 pt-6">
       <ContactSrcDivHeader />
       <ContactInlineLinks />
     </div>
