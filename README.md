@@ -52,18 +52,20 @@ src/
     main.jsx
     NavBar.jsx
     ProjectCard.jsx
+    About.jsx
+    Contact.jsx
   data/
-    projects.js
+    projects.data.js
   App.jsx
   main.jsx
 ```
 
 ## Roadmap
 
-- [ ] About section
+- [x] About section
 - [ ] Contact section / form
-- [ ] Individual project detail pages
-- [ ] Tech tag badges on project cards
+- [x] Individual project detail pages
+- [x] Tech tag badges on project cards
 - [ ] Custom domain
 
 ## Contact
