@@ -4,6 +4,7 @@ import { NavBar,NavModal } from "./components/Navbar.jsx"
 import { Hero } from "./components/main.jsx"
 import { Projects } from "./components/project.jsx"
 import { AboutSection } from "./components/About.jsx"
+import { Contact } from "./components/Contact.jsx"
 
 const App = ()=>{
   const [navModal,setNavModal]=useState(false)
@@ -14,6 +15,7 @@ const App = ()=>{
         <Hero userName="Ashish."/>
         <Projects/>
         <AboutSection/>
+        <Contact/>
     </div>
   )
 }

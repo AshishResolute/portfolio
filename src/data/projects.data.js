@@ -49,3 +49,9 @@ export const skills={
   auth:["JWT","OAuth 2.0","RBAC","bcrypt"],
   also:["React","Tailwind CSS","BullMQ"]
 }
+
+export const contactDetails = {
+  email:"ashishresolute@gmail.com",
+  github:"https://github.com/AshishResolute",
+  linkedin:"https://www.linkedin.com/in/ashishgourh/"
+}
