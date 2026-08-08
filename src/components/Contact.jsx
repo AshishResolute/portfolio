@@ -68,18 +68,24 @@ const ContactInlineLinks = () => {
 const ContactForm = () => {
   return (
     <div className=" p-8 text-slate-300 bg-black rounded-3xl ">
-      <form action="" className="flex flex-col space-y-1.5" onSubmit={handleSubmit}>
+      <form
+        action="https://formspree.io/f/xoeajegj"
+        className="flex flex-col space-y-1.5"
+        onSubmit={handleSubmit}
+      >
         <label htmlFor="name">Name</label>
         <input
           type="text"
           className="border border-slate-500 rounded-lg p-1"
           id="name"
+          name="name"
         />
         <label htmlFor="email">Email</label>
         <input
           type="email"
           className="border border-slate-500 rounded-lg p-1"
           id="email"
+          name="email"
         />
         <label htmlFor="message">Message</label>
         <textarea
@@ -100,7 +106,12 @@ const ContactForm = () => {
   );
 };
 
-
-const handleSubmit = (e)=>{
+const handleSubmit = async (e) => {
   e.preventDefault();
-}
+  const formData = new FormData(e.target);
+  await fetch("https://formspree.io/f/xoeajegj", {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" },
+  });
+};
