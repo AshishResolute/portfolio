@@ -70,7 +70,7 @@ const SkillsSection = ()=>{
             </div>
             <div className='flex flex-col items-center mt-3 space-y-2'>
                 <p>Find my Resume here</p>
-                <a href="../../../Resume.pdf" target="_blank" rel="noopener noreferrer"><span className='cursor-pointer px-3 py-1 border border-gray-500 rounded-xl hover:text-white hover:bg-black hover:text-lg transition-all duration-300 '>View Resume</span></a>
+                <a href="../../../Resume.pdf" target="_blank" rel="noopener noreferrer"><span className='inline-block cursor-pointer px-3 py-1 border border-gray-500 rounded-xl hover:text-white hover:bg-black  transition-all transform hover:scale-110 duration-300 '>View Resume</span></a>
             </div>
         </div>
     )
