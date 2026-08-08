@@ -68,7 +68,7 @@ const ContactInlineLinks = () => {
 const ContactForm = () => {
   return (
     <div className=" p-8 text-slate-300 bg-black rounded-3xl ">
-      <form action="" className="flex flex-col space-y-1.5">
+      <form action="" className="flex flex-col space-y-1.5" onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -99,3 +99,8 @@ const ContactForm = () => {
     </div>
   );
 };
+
+
+const handleSubmit = (e)=>{
+  e.preventDefault();
+}
