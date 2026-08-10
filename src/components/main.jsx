@@ -24,7 +24,7 @@ export const Hero = ({ userName }) => {
           </button>
         </a> */}
         <a
-          href="#"
+          href="#contact"
           className=" mr-1.5 inline-block rounded border px-3 py-2 text-white bg-black hover:bg-white hover:text-black transition-colors duration-300"
         >
           Get in Touch

@@ -5,6 +5,15 @@ import { IoStatsChart } from "react-icons/io5";
 
 
 export const projects = [
+   {
+    icon: TbUsersGroup,
+    title: "SocialBuzz",
+    description:
+      "Social media backend — auth, caching, and notifications, fully migrated to TypeScript with tests.",
+    tags: ["Node.js", "Express.js", "Postgres", "TypeScript", "Redis"],
+    link: "/projects/socialbuzz",
+    githubSrc:"https://github.com/AshishResolute/socialBuzz"
+  },
   {
     icon: PiPiggyBankFill,
     title: "BankApi",
@@ -13,15 +22,6 @@ export const projects = [
     tags: ["Node.js", "Postgres", "JavaScript"],
     link: "/projects/bankapi",
     githubSrc:"https://github.com/AshishResolute/bankapi"
-  },
-  {
-    icon: TbUsersGroup,
-    title: "SocialBuzz",
-    description:
-      "Social media backend — auth, caching, and notifications, fully migrated to TypeScript with tests.",
-    tags: ["Node.js", "Express.js", "Postgres", "TypeScript", "Redis"],
-    link: "/projects/socialbuzz",
-    githubSrc:"https://github.com/AshishResolute/socialBuzz"
   },
   {
     icon: IoStatsChart,

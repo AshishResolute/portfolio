@@ -9,7 +9,7 @@ export const NavBar = ({userName,navModal,setNavModal})=>{
             <a href="#hero"><li>Home</li></a>
             <a href="#projects"><li>Projects</li></a>
             <a href="#about"><li>About</li></a>
-            <li>Contact</li>
+            <a href="#contact"><li>Contact</li></a>
         </ul>
         <GrContact className="hidden md:flex" />
         <button onClick={()=>setNavModal(!navModal)} className="md:hidden"><VscMenu  /></button>

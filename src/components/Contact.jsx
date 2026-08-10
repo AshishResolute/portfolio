@@ -5,7 +5,7 @@ import { contactDetails } from "../data/projects.data.js";
 
 export const Contact = () => {
   return (
-    <div className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 ">
+    <div className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 " id="contact">
       <ContactDivBtns />
       <ContactForm />
     </div>
@@ -40,7 +40,7 @@ const ContactInlineLinks = () => {
     <div className=" space-y-3  border-red-300 p-8 pt-0">
       <a
         href={`mailto:${contactDetails.email}`}
-        className="flex items-center gap-7 p-2 w-64 max-[350px]:w-44 max-[350px]:justify-center  border border-slate-500hover:border-slate-300 hover:bg-slate-800/50 transition-colors duration-300 rounded-xl"
+        className="flex items-center gap-4 p-2 w-64 max-[350px]:w-44 max-[350px]:justify-center  border border-slate-500hover:border-slate-300 hover:bg-slate-800/50 transition-colors duration-300 rounded-xl"
       >
         <HiOutlineMail />
         <span className="">Email</span>
