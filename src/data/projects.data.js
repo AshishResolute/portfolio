@@ -12,7 +12,7 @@ export const projects = [
       "Social media backend — auth, caching, and notifications, fully migrated to TypeScript with tests.",
     tags: ["Node.js", "Express.js", "Postgres", "TypeScript", "Redis"],
     link: "/projects/socialbuzz",
-    githubSrc:"https://github.com/AshishResolute/socialBuzz"
+    buttons:[{"View on Github":"https://github.com/AshishResolute/socialBuzz"}]
   },
   {
     icon: PiPiggyBankFill,
@@ -21,7 +21,8 @@ export const projects = [
       "Banking backend with row-level locking,rate limiting, and refresh-token rotation.",
     tags: ["Node.js", "Postgres", "JavaScript"],
     link: "/projects/bankapi",
-    githubSrc:"https://github.com/AshishResolute/bankapi"
+    githubSrc:"https://github.com/AshishResolute/bankapi",
+    buttons:[{"View on Github":"https://github.com/AshishResolute/bankapi"},{"Api Docs":"https://bankapi-1-5iag.onrender.com/api-docs/"}]
   },
   {
     icon: IoStatsChart,
@@ -37,7 +38,7 @@ export const projects = [
       "Prisma",
     ],
     link: "/projects/jobtracker",
-    githubSrc:"https://github.com/AshishResolute/Tracker_FrontEnd"
+    buttons:[{"View on Github":"https://github.com/AshishResolute/Tracker_FrontEnd"},{"Live":"https://tracker-front-end-xi.vercel.app/"}]
   },
 ];
 

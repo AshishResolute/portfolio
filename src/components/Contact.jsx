@@ -93,7 +93,6 @@ const ContactForm = () => {
           id="message"
           className=" border border-slate-500 rounded-lg p-1 field-sizing-content"
           placeholder=" What's on your mind?"
-          id="message"
         ></textarea>
         <button
           type="submit"
