@@ -18,26 +18,33 @@ export const ProjectDetailPage = () => {
 
 const ProjectPageHeader = ({ title, description, tags, buttons }) => {
   return (
-    <div className="p-5 space-y-1.5 md:space-y-2.5">
+    <div className="p-5 space-y-1.5 md:space-y-3">
       <h1 className=" text-4xl text-slate-800">{title}</h1>
       <p className="text-slate-700">{description}</p>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2  pb-2.5">
         {tags.map((tag) => (
           <button
             key={tag}
-            className="border border-gray p-1 rounded-xl hover:border-black hover:text-white transition-colors duration-300"
+            className="border border-gray p-1 rounded-xl hover:border-black hover:text-[#A1A1AA] transition-colors duration-300"
           >
             {tag}
           </button>
         ))}
       </div>
-      {buttons.map((item, ind) => (
-        <a href={Object.values(item)} target="_blank" key={ind}>
-          <span className="border border-[#F97316] p-2 hover:bg-[#F97316] hover:text-[#A1A1AA]">
-            {Object.keys(item)}
-          </span>
-        </a>
-      ))}
+      {buttons.map((item, ind) => {
+        return (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={ind}
+          >
+            <span className=" p-2 rounded-md bg-orange-400 text-gray-900 hover:bg-black hover:text-white transition-colors duration-300">
+              {item.label}
+            </span>
+          </a>
+        );
+      })}
     </div>
   );
 };
