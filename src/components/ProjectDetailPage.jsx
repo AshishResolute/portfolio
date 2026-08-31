@@ -32,16 +32,17 @@ const ProjectPageHeader = ({ title, description, tags, buttons }) => {
         ))}
       </div>
       {buttons.map((item, ind) => {
+        const Icon = item.icon;
         return (
           <a
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
             key={ind}
+            className="mx-1 inline-flex justify-center items-center gap-1.5 p-2 rounded-md bg-orange-400 text-gray-900 hover:bg-black hover:text-white transition-colors duration-300"
           >
-            <span className=" p-2 rounded-md bg-orange-400 text-gray-900 hover:bg-black hover:text-white transition-colors duration-300">
-              {item.label}
-            </span>
+            <Icon />
+            <span className="">{item.label}</span>
           </a>
         );
       })}

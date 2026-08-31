@@ -1,7 +1,9 @@
 import { PiPiggyBankFill } from "react-icons/pi";
 import { TbUsersGroup } from "react-icons/tb";
 import { IoStatsChart } from "react-icons/io5";
-
+import { RiGithubLine } from "react-icons/ri";
+import { SiGoogledocs } from "react-icons/si";
+import { SiRender } from "react-icons/si";
 export const projects = [
   {
     icon: TbUsersGroup,
@@ -14,6 +16,7 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/socialBuzz",
+        icon:RiGithubLine
       },
     ],
   },
@@ -29,10 +32,12 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/bankapi",
+        icon:RiGithubLine
       },
       {
         label: "Api Docs",
         url: "https://bankapi-1-5iag.onrender.com/api-docs/",
+        icon:SiGoogledocs
       },
     ],
   },
@@ -54,8 +59,9 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/Tracker_FrontEnd",
+        icon:RiGithubLine
       },
-      { label: "Live", url: "https://tracker-front-end-xi.vercel.app/" },
+      { label: "Live", url: "https://tracker-front-end-xi.vercel.app/",icon:SiRender},
     ],
   },
 ];
