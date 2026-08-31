@@ -4,6 +4,12 @@ import { IoStatsChart } from "react-icons/io5";
 import { RiGithubLine } from "react-icons/ri";
 import { SiGoogledocs } from "react-icons/si";
 import { SiRender } from "react-icons/si";
+import { FaUser } from "react-icons/fa";
+import { DiRedis } from "react-icons/di";
+import { RiUserFollowLine } from "react-icons/ri";
+import { AiTwotoneLike } from "react-icons/ai";
+import { MdMarkEmailRead } from "react-icons/md";
+import { SiVitest } from "react-icons/si";
 export const projects = [
   {
     icon: TbUsersGroup,
@@ -16,9 +22,26 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/socialBuzz",
-        icon:RiGithubLine
+        icon: RiGithubLine,
       },
     ],
+    overview:
+      "Built a production-ready social media API from scratch with real auth, cache-aside feed, and reliable notifications. Fully migrated to TypeScript for better maintainability and developer experience.",
+    keyFeatures: [
+      {
+        icon: FaUser,
+        feat: "JWT + refresh token rotation with reuse detection",
+      },
+      { icon: DiRedis, feat: "Redis-cached feed (170ms → 5ms)" },
+      { icon: RiUserFollowLine, feat: "Follow graph + paginated feed" },
+      {
+        icon: AiTwotoneLike,
+        feat: "Likes & comments with race-safe constraints",
+      },
+      { icon: MdMarkEmailRead, feat: "BullMQ + Resend email notifications" },
+      { icon: SiVitest, feat: "80%+ test coverage with Jest" },
+    ],
+    architecture:["Client","Middlewares","Controllers","Data Layer"]
   },
   {
     icon: PiPiggyBankFill,
@@ -32,12 +55,12 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/bankapi",
-        icon:RiGithubLine
+        icon: RiGithubLine,
       },
       {
         label: "Api Docs",
         url: "https://bankapi-1-5iag.onrender.com/api-docs/",
-        icon:SiGoogledocs
+        icon: SiGoogledocs,
       },
     ],
   },
@@ -59,9 +82,13 @@ export const projects = [
       {
         label: "View on Github",
         url: "https://github.com/AshishResolute/Tracker_FrontEnd",
-        icon:RiGithubLine
+        icon: RiGithubLine,
       },
-      { label: "Live", url: "https://tracker-front-end-xi.vercel.app/",icon:SiRender},
+      {
+        label: "Live",
+        url: "https://tracker-front-end-xi.vercel.app/",
+        icon: SiRender,
+      },
     ],
   },
 ];
