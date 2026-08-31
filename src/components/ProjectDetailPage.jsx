@@ -73,7 +73,7 @@ const ProjectMainContent = ({
 
 const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
   return (
-    <div className="space-y-1.5 md:space-y-2.5 border border-white p-1">
+    <div className="space-y-1.5 md:space-y-2.5 ">
       <h2 className="text-slate-800 text-xl">OverView</h2>
       <p>{overview}</p>
       <p className="text-slate-800 text-lg">Key Features</p>
@@ -96,7 +96,7 @@ const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
 
 const ProjectArchitectureWithTerminal = ({ architecture }) => {
   return (
-    <div className="border border-slate-400 p-4">
+    <div className=" p-4">
       <ProjectArch architecture={architecture} />
     </div>
   );
@@ -104,25 +104,29 @@ const ProjectArchitectureWithTerminal = ({ architecture }) => {
 
 const ProjectArch = ({ architecture }) => {
   return (
-    <div className="space-y-1.5">
+    <div className="space-y-1.5 md:space-y-2.5">
       <div className="flex items-center gap-2 ">
         <ImTree />
         <h2>Architecture</h2>
       </div>
-      <div>
-        <ul className="md:flex md:flex-wrap md:items-center gap-1 p-1 border border-red-300 ">
-          {architecture.map((item, ind) => {
-            return (
-              <li
-                key={ind}
-                className="text-center rounded border border-slate-600"
-              >
+      <ul className="md:flex md:flex-wrap md:items-center gap-1">
+        {architecture.map((item, ind) => {
+          const insertArrow = ind !== architecture.length - 1;
+          return (
+            <li key={ind} className="text-center">
+              <span className="p-1 flex justify-center md:inline  rounded border border-slate-600 py-1 px-2 ">
                 {item}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+              </span>
+              {insertArrow && (
+                <>
+                  <span className="hidden md:inline px-1">→</span>
+                  <span className="md:hidden border border-white">↓</span>
+                </>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
