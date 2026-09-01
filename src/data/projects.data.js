@@ -10,6 +10,12 @@ import { RiUserFollowLine } from "react-icons/ri";
 import { AiTwotoneLike } from "react-icons/ai";
 import { MdMarkEmailRead } from "react-icons/md";
 import { SiVitest } from "react-icons/si";
+import { FiLock } from "react-icons/fi";
+import { FiRefreshCw } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+import { FiLayout } from "react-icons/fi";
+import { FiDatabase } from "react-icons/fi";
+import { FiGitBranch } from "react-icons/fi";
 export const projects = [
   {
     icon: TbUsersGroup,
@@ -41,7 +47,7 @@ export const projects = [
       { icon: MdMarkEmailRead, feat: "BullMQ + Resend email notifications" },
       { icon: SiVitest, feat: "80%+ test coverage with Jest" },
     ],
-    architecture:["Client","Middlewares","Controllers","Data Layer"]
+    architecture: ["Client", "Middlewares", "Controllers", "Data Layer"],
   },
   {
     icon: PiPiggyBankFill,
@@ -62,6 +68,34 @@ export const projects = [
         url: "https://bankapi-1-5iag.onrender.com/api-docs/",
         icon: SiGoogledocs,
       },
+    ],
+    overview:
+      "A banking backend focused on data safety under concurrent access — built around PostgreSQL row-level locking, Redis-backed rate limiting, and secure session rotation. Live Swagger docs let you explore every endpoint.",
+    keyFeatures: [
+      {
+        icon: FiLock,
+        feat: "PostgreSQL row-level locking to prevent race conditions on concurrent transactions",
+      },
+      {
+        icon: DiRedis,
+        feat: "Rate limiting via Upstash Redis, enforced through Lua scripts",
+      },
+      {
+        icon: FiRefreshCw,
+        feat: "JWT refresh-token rotation for secure, revocable sessions",
+      },
+      { icon: FiCheckCircle, feat: "70%+ Jest/Supertest test coverage" },
+      {
+        icon: SiGoogledocs,
+        feat: "Live interactive API docs (Swagger), deployed on Render",
+      },
+    ],
+    architecture: [
+      "Client",
+      "Auth middleware",
+      "Rate limiter",
+      "Routes",
+      "Postgres",
     ],
   },
   {
@@ -89,6 +123,23 @@ export const projects = [
         url: "https://tracker-front-end-xi.vercel.app/",
         icon: SiRender,
       },
+    ],
+    keyFeatures: [
+      { icon: FiLayout, feat: "React frontend deployed on Vercel" },
+      {
+        icon: FiDatabase,
+        feat: "Node.js + TypeScript + PostgreSQL + Prisma backend, deployed on Render",
+      },
+      {
+        icon: FiGitBranch,
+        feat: "Full-stack deployment pipeline (separate frontend/backend hosting, connected via API)",
+      },
+    ],
+    architecture: [
+      "Client(React)",
+      "Backend(Express/Ts)",
+      "Prisma",
+      "Postgres",
     ],
   },
 ];
