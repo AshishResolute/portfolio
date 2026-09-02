@@ -16,6 +16,25 @@ import { FiCheckCircle } from "react-icons/fi";
 import { FiLayout } from "react-icons/fi";
 import { FiDatabase } from "react-icons/fi";
 import { FiGitBranch } from "react-icons/fi";
+
+const SocialBuzzTerminal =
+  `{
+  POST auth/login
+    "success": true,
+    "data": {
+      "user": {
+        "id": "usr_8f3a7c2e",
+        "email": "jane@socialbuzz.dev",
+        "username": "jane_dev"
+      },
+      "tokens": {
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+        "refreshToken": "rt_9b7e4d1a..."
+      }
+    }
+}`
+
+
 export const projects = [
   {
     icon: TbUsersGroup,
@@ -48,6 +67,8 @@ export const projects = [
       { icon: SiVitest, feat: "80%+ test coverage with Jest" },
     ],
     architecture: ["Client", "Middlewares", "Controllers", "Data Layer"],
+    terminalTitle:"Login Response (200OK)",
+    terminalData:SocialBuzzTerminal
   },
   {
     icon: PiPiggyBankFill,
@@ -170,3 +191,6 @@ export const contactDetails = {
   github: "https://github.com/AshishResolute",
   linkedin: "https://www.linkedin.com/in/ashishgourh/",
 };
+
+
+

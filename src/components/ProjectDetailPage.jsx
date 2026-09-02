@@ -16,6 +16,8 @@ export const ProjectDetailPage = () => {
         overview={data.overview}
         keyFeatures={data.keyFeatures}
         architecture={data.architecture}
+        terminalTitle={data.terminalTitle}
+        terminalData={data.terminalData}
       />
     </div>
   );
@@ -58,7 +60,9 @@ const ProjectPageHeader = ({ title, description, tags, buttons }) => {
 const ProjectMainContent = ({
   overview,
   keyFeatures,
-  architecture = { architecture },
+  architecture,
+  terminalData,
+  terminalTitle
 }) => {
   return (
     <div className="p-5 flex flex-col gap-3  md:grid md:grid-cols-2 md:gap-4">
@@ -66,7 +70,7 @@ const ProjectMainContent = ({
         overview={overview}
         keyFeatures={keyFeatures}
       />
-      <ProjectArchitectureWithTerminal architecture={architecture} />
+      <ProjectArchitectureWithTerminal architecture={architecture} terminalData={terminalData} terminalTitle={terminalTitle} />
     </div>
   );
 };
@@ -94,10 +98,11 @@ const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
   );
 };
 
-const ProjectArchitectureWithTerminal = ({ architecture }) => {
+const ProjectArchitectureWithTerminal = ({ architecture ,terminalData,terminalTitle}) => {
   return (
-    <div className=" p-4">
-      <ProjectArch architecture={architecture} />
+    <div className="p-4 space-y-1.5 md:space-y-2.5">
+      <ProjectArch architecture={architecture}  />
+      <ProjectTerminal terminalData={terminalData} terminalTitle={terminalTitle}/>
     </div>
   );
 };
@@ -129,4 +134,16 @@ const ProjectArch = ({ architecture }) => {
       </ul>
     </div>
   );
+};
+
+const ProjectTerminal = ({terminalData,terminalTitle}) => {
+  return (<div  className="bg-black rounded-xl p-4" >
+    <div>
+      <h2>{terminalTitle}</h2>
+    </div>
+    <div >
+      <pre className="text-wrap">{terminalData}</pre>
+    </div>
+    
+  </div>);
 };
