@@ -62,7 +62,7 @@ const ProjectMainContent = ({
   keyFeatures,
   architecture,
   terminalData,
-  terminalTitle
+  terminalTitle,
 }) => {
   return (
     <div className="p-5 flex flex-col gap-4  md:grid md:grid-cols-2 md:gap-4">
@@ -70,7 +70,11 @@ const ProjectMainContent = ({
         overview={overview}
         keyFeatures={keyFeatures}
       />
-      <ProjectArchitectureWithTerminal architecture={architecture} terminalData={terminalData} terminalTitle={terminalTitle} />
+      <ProjectArchitectureWithTerminal
+        architecture={architecture}
+        terminalData={terminalData}
+        terminalTitle={terminalTitle}
+      />
     </div>
   );
 };
@@ -98,11 +102,18 @@ const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
   );
 };
 
-const ProjectArchitectureWithTerminal = ({ architecture ,terminalData,terminalTitle}) => {
+const ProjectArchitectureWithTerminal = ({
+  architecture,
+  terminalData,
+  terminalTitle,
+}) => {
   return (
     <div className="p-4 space-y-4 md:space-y-4 ">
-      <ProjectArch architecture={architecture}  />
-      <ProjectTerminal terminalData={terminalData} terminalTitle={terminalTitle}/>
+      <ProjectArch architecture={architecture} />
+      <ProjectTerminal
+        terminalData={terminalData}
+        terminalTitle={terminalTitle}
+      />
     </div>
   );
 };
@@ -136,14 +147,15 @@ const ProjectArch = ({ architecture }) => {
   );
 };
 
-const ProjectTerminal = ({terminalData,terminalTitle}) => {
-  return (<div  className="bg-black rounded-xl p-4 min-[400px]:hidden" >
-    <div>
-      <h2 className="text-white/95">{terminalTitle}</h2>
+const ProjectTerminal = ({ terminalData, terminalTitle }) => {
+  return (
+    <div className="bg-black rounded-xl p-4 hidden min-[460px]:block">
+      <div>
+        <h2 className="text-white/95">{terminalTitle}</h2>
+      </div>
+      <div className="">
+        <pre className="text-wrap text-sm text-slate-400">{terminalData}</pre>
+      </div>
     </div>
-    <div className="">
-      <pre className="text-wrap text-sm text-slate-400">{terminalData}</pre>
-    </div>
-    
-  </div>);
+  );
 };
