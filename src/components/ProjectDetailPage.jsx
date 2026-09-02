@@ -5,7 +5,7 @@ export const ProjectDetailPage = () => {
   const { slug } = useParams();
   const data = projects.find(({ title }) => title.toLowerCase() === slug);
   return (
-    <div className="font-sora p-5 text-[#6b6b68]">
+    <div className="font-sora p-5 text-[#6b6b68] ">
       <ProjectPageHeader
         title={data.title}
         description={data.description}
@@ -24,13 +24,13 @@ export const ProjectDetailPage = () => {
 const ProjectPageHeader = ({ title, description, tags, buttons }) => {
   return (
     <div className="p-5 space-y-1.5 md:space-y-3">
-      <h1 className=" text-4xl text-slate-800">{title}</h1>
+      <h1 className=" text-5xl text-slate-800">{title}</h1>
       <p className="text-slate-700">{description}</p>
       <div className="flex flex-wrap gap-2  pb-2.5">
         {tags.map((tag) => (
           <button
             key={tag}
-            className="border border-gray p-1 rounded-xl hover:border-black hover:text-[#A1A1AA] transition-colors duration-300"
+            className="border border-gray p-1 rounded-xl hover:border-black hover:bg-gray-700 hover:text-[#A1A1AA] transition-colors duration-300"
           >
             {tag}
           </button>
