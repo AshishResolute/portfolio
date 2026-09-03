@@ -1,6 +1,7 @@
 import { projects } from "../data/projects.data.js";
 import { useParams } from "react-router";
 import { ImTree } from "react-icons/im";
+
 export const ProjectDetailPage = () => {
   const { slug } = useParams();
   const data = projects.find(({ title }) => title.toLowerCase() === slug);
@@ -65,7 +66,7 @@ const ProjectMainContent = ({
   terminalTitle,
 }) => {
   return (
-    <div className="p-5 flex flex-col gap-4  md:grid md:grid-cols-2 md:gap-4">
+    <div className="p-5 flex flex-col md:grid md:grid-cols-2 gap-16">
       <ProjectBodyFeaturesSection
         overview={overview}
         keyFeatures={keyFeatures}
@@ -81,7 +82,7 @@ const ProjectMainContent = ({
 
 const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
   return (
-    <div className="space-y-1.5 md:space-y-2.5 ">
+    <div className="space-y-1.5 md:space-y-2.5  py-4">
       <h2 className="text-slate-800 text-xl">OverView</h2>
       <p>{overview}</p>
       <p className="text-slate-800 text-lg">Key Features</p>
@@ -90,9 +91,9 @@ const ProjectBodyFeaturesSection = ({ overview, keyFeatures }) => {
           const Icon = item.icon;
           return (
             <li key={ind}>
-              <div className="flex gap-3  items-center p-1 border-b">
+              <div className="flex gap-3  items-center p-1 ">
                 <Icon />
-                <span className="">{item.feat}</span>
+                <span className="p-1 border-b">{item.feat}</span>
               </div>
             </li>
           );
@@ -108,7 +109,7 @@ const ProjectArchitectureWithTerminal = ({
   terminalTitle,
 }) => {
   return (
-    <div className="p-4 space-y-4 md:space-y-4 ">
+    <div className="p-4 space-y-4 md:space-y-6 ">
       <ProjectArch architecture={architecture} />
       <ProjectTerminal
         terminalData={terminalData}
@@ -121,22 +122,24 @@ const ProjectArchitectureWithTerminal = ({
 const ProjectArch = ({ architecture }) => {
   return (
     <div className="space-y-1.5 md:space-y-2.5">
-      <div className="flex items-center gap-2 ">
+      <div className="flex items-center gap-5 ">
         <ImTree />
-        <h2>Architecture</h2>
+        <h2 className="text-xl text-slate-800">Architecture</h2>
       </div>
-      <ul className="md:flex md:flex-wrap md:items-center gap-1">
+      <ul className="flex flex-col md:flex-row flex-wrap md:items-center py-4 gap-3  ">
         {architecture.map((item, ind) => {
           const insertArrow = ind !== architecture.length - 1;
           return (
             <li key={ind} className="text-center">
-              <span className="p-1 flex justify-center md:inline  rounded border border-slate-600 py-1 px-2 ">
+              <span className="flex flex-col justify-center items-center md:inline-flex rounded-xl border border-slate-600 py-1 px-2 ">
                 {item}
               </span>
               {insertArrow && (
                 <>
-                  <span className="hidden md:inline px-1">→</span>
-                  <span className="md:hidden border border-white">↓</span>
+                  <span className="hidden md:inline pl-1 text-orange-400 ml-1 text-xl">
+                    →
+                  </span>
+                  <span className="md:hidden text-orange-400 text-xl ">↓</span>
                 </>
               )}
             </li>
@@ -150,11 +153,18 @@ const ProjectArch = ({ architecture }) => {
 const ProjectTerminal = ({ terminalData, terminalTitle }) => {
   return (
     <div className="bg-black rounded-xl p-4 hidden min-[460px]:block">
-      <div>
-        <h2 className="text-white/95">{terminalTitle}</h2>
+      <div className="flex items-center">
+        <div className="flex gap-2 p-4 ">
+          <span className="rounded-[50%] bg-red-300 inline-block w-2 h-2 "></span>
+          <span className="rounded-[50%] bg-yellow-300 inline-block w-2 h-2"></span>
+          <span className="rounded-[50%] bg-green-300 inline-block w-2 h-2"></span>
+        </div>
+        <h2 className=" text-green-500">{terminalTitle}</h2>
       </div>
-      <div className="">
-        <pre className="text-wrap text-sm text-slate-400">{terminalData}</pre>
+      <div className="p-2">
+        <pre className="text-wrap text-sm text-gray-300 font-sora">
+          {terminalData}
+        </pre>
       </div>
     </div>
   );

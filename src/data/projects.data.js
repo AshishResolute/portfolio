@@ -19,19 +19,19 @@ import { FiGitBranch } from "react-icons/fi";
 
 const SocialBuzzTerminal =
   `{
-  POST auth/login
-    "success": true,
-    "data": {
-      "user": {
-        "id": "usr_8f3a7c2e",
-        "email": "jane@socialbuzz.dev",
-        "username": "jane_dev"
-      },
-      "tokens": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-        "refreshToken": "rt_9b7e4d1a..."
-      }
-    }
+      POST auth/login
+        "success": true,
+        "data": {
+          "user": {
+            "id": "usr_8f3a7c2e",
+            "email": "jane@socialbuzz.dev",
+            "username": "jane_dev"
+          },
+          "tokens": {
+            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "refreshToken": "rt_9b7e4d1a..."
+          }
+        }
 }`
 
 
@@ -66,8 +66,8 @@ export const projects = [
       { icon: MdMarkEmailRead, feat: "BullMQ + Resend email notifications" },
       { icon: SiVitest, feat: "80%+ test coverage with Jest" },
     ],
-    architecture: ["Client", "Middlewares", "Controllers", "Data Layer"],
-    terminalTitle:"Login Response (200OK)",
+    architecture: ["Client", "Middlewares", "Controllers", "Data Layer","Postgres","Redis","BullMQ"],
+    terminalTitle:"Login Response (200 OK)",
     terminalData:SocialBuzzTerminal
   },
   {
