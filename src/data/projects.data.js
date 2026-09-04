@@ -16,10 +16,11 @@ import { FiCheckCircle } from "react-icons/fi";
 import { FiLayout } from "react-icons/fi";
 import { FiDatabase } from "react-icons/fi";
 import { FiGitBranch } from "react-icons/fi";
-
-const SocialBuzzTerminal =
-  `{
-      POST auth/login
+import { SiJsonwebtokens } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+import { FaUserShield } from "react-icons/fa6";
+const SocialBuzzTerminal = `POST   /api/auth/login
+{
         "success": true,
         "data": {
           "user": {
@@ -28,12 +29,11 @@ const SocialBuzzTerminal =
             "username": "jane_dev"
           },
           "tokens": {
-            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "accessToken": "eyJhbGciOiJI...",
             "refreshToken": "rt_9b7e4d1a..."
           }
         }
-}`
-
+}`;
 
 export const projects = [
   {
@@ -66,9 +66,18 @@ export const projects = [
       { icon: MdMarkEmailRead, feat: "BullMQ + Resend email notifications" },
       { icon: SiVitest, feat: "80%+ test coverage with Jest" },
     ],
-    architecture: ["Client", "Middlewares", "Controllers", "Data Layer","Postgres","Redis","BullMQ"],
-    terminalTitle:"Login Response (200 OK)",
-    terminalData:SocialBuzzTerminal
+    architecture: [
+      "Client",
+      "Middlewares",
+      "Controllers",
+      "Data Layer",
+      "Postgres",
+      "Redis",
+      "BullMQ",
+    ],
+    terminalTitle: "Login Response (200 OK)",
+    terminalData: SocialBuzzTerminal,
+    techDecisions:[{icon:FaUserShield,title:"Refresh Token Family",info:"Self Referencing Foreign key,bcrypt hashed tokens,full revocation on re-use detection"},{icon:DiRedis,title:"Cache-aside Feed latency win",info:"Redis cache layer reduced feed latency from 170ms to 5ms"},{icon:TbBrandTypescript,title:"Typescript migration + tests + Docker + CI",info:"Full Typescript migration,80% test coverage with jest,Dockerised Services,Github Actions CI"}]
   },
   {
     icon: PiPiggyBankFill,
@@ -191,6 +200,3 @@ export const contactDetails = {
   github: "https://github.com/AshishResolute",
   linkedin: "https://www.linkedin.com/in/ashishgourh/",
 };
-
-
-

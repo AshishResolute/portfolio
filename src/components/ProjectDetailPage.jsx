@@ -20,6 +20,7 @@ export const ProjectDetailPage = () => {
         terminalTitle={data.terminalTitle}
         terminalData={data.terminalData}
       />
+      <TechSection techDecisions={data.techDecisions}/>
     </div>
   );
 };
@@ -33,7 +34,7 @@ const ProjectPageHeader = ({ title, description, tags, buttons }) => {
         {tags.map((tag) => (
           <button
             key={tag}
-            className="border border-gray p-1 rounded-xl hover:border-black hover:bg-gray-700 hover:text-[#A1A1AA] transition-colors duration-300"
+            className="border border-gray p-1 rounded-xl hover:border-black hover:bg-gray-700 hover:text-[#A1A1AA] transition-colors duration-400"
           >
             {tag}
           </button>
@@ -109,7 +110,7 @@ const ProjectArchitectureWithTerminal = ({
   terminalTitle,
 }) => {
   return (
-    <div className="p-4 space-y-4 md:space-y-6 ">
+    <div className="p-4 space-y-4 md:space-y-2  ">
       <ProjectArch architecture={architecture} />
       <ProjectTerminal
         terminalData={terminalData}
@@ -169,3 +170,31 @@ const ProjectTerminal = ({ terminalData, terminalTitle }) => {
     </div>
   );
 };
+
+const TechSection = ({techDecisions})=>{
+  return (
+    <div className="p-5  space-y-1.5 md:space-y-2.5">
+      <h2 className="text-slate-800 text-xl">Tech Decisions</h2>
+      <div className="flex flex-col min-[820px]:flex-row md:justify-center  py-4 gap-4 ">
+        {techDecisions.map((data,ind)=>{
+          const Icon = data.icon;
+          return(
+            <TechDecisionsComp key={ind} Icon={Icon} title={data.title} info={data.info}/>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+const TechDecisionsComp = ({Icon,title,info})=>{
+  return (
+    <div className="flex items-center gap-2 rounded p-2">
+      <Icon className="text-2xl text-orange-400 min-[820px]:text-4xl"/>
+      <div>
+        <span>{title}</span>
+        <p>{info}</p>
+      </div>
+    </div>
+  )
+}

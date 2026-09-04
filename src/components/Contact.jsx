@@ -5,7 +5,10 @@ import { contactDetails } from "../data/projects.data.js";
 
 export const Contact = () => {
   return (
-    <div className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 " id="contact">
+    <div
+      className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 "
+      id="contact"
+    >
       <ContactDivBtns />
       <ContactForm />
     </div>
