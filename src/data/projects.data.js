@@ -77,7 +77,7 @@ export const projects = [
     ],
     terminalTitle: "Login Response (200 OK)",
     terminalData: SocialBuzzTerminal,
-    techDecisions:[{icon:FaUserShield,title:"Refresh Token Family",info:"Self Referencing Foreign key,bcrypt hashed tokens,full revocation on re-use detection"},{icon:DiRedis,title:"Cache-aside Feed latency win",info:"Redis cache layer reduced feed latency from 170ms to 5ms"},{icon:TbBrandTypescript,title:"Typescript migration + tests + Docker + CI",info:"Full Typescript migration,80% test coverage with jest,Dockerised Services,Github Actions CI"}]
+    techDecisions:[{icon:FaUserShield,title:"Refresh Token Family",info:"Self-referencing foreign key, bcrypt-hashed tokens, full revocation on reuse detection"},{icon:DiRedis,title:"Cache-aside Feed latency win",info:"Redis cache layer reduced feed latency from 170ms to 5ms"},{icon:TbBrandTypescript,title:"Typescript migration + tests + Docker + CI",info:"Full TypeScript migration, 80% test coverage with Jest, Dockerized services, GitHub Actions CI"}]
   },
   {
     icon: PiPiggyBankFill,
