@@ -5,7 +5,10 @@ import { contactDetails } from "../data/projects.data.js";
 
 export const Contact = () => {
   return (
-    <div className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 " id="contact">
+    <div
+      className=" text-[#6b6b68]  p-8 pt-6 grid grid-cols-1 md:grid-cols-2 gap-6 "
+      id="contact"
+    >
       <ContactDivBtns />
       <ContactForm />
     </div>
@@ -93,7 +96,6 @@ const ContactForm = () => {
           id="message"
           className=" border border-slate-500 rounded-lg p-1 field-sizing-content"
           placeholder=" What's on your mind?"
-          id="message"
         ></textarea>
         <button
           type="submit"

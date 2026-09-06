@@ -65,6 +65,8 @@ src/
     ProjectCard.jsx
     About.jsx
     Contact.jsx
+    main.jsx
+    ProjectDetailPage.jsx
   data/
     projects.data.js
   App.jsx
