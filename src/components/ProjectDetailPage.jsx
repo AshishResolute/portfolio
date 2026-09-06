@@ -28,7 +28,9 @@ export const ProjectDetailPage = () => {
 const ProjectPageHeader = ({ title, description, tags, buttons }) => {
   return (
     <div className="p-5 space-y-1.5 md:space-y-3">
-      <h1 className=" text-5xl text-slate-800">{title}</h1>
+      <h1 className=" text-5xl text-slate-800  text-shadow-lg text-shadow-gray-400 ">
+        {title}
+      </h1>
       <p className="text-slate-700">{description}</p>
       <div className="flex flex-wrap gap-2  pb-2.5">
         {tags.map((tag) => (
@@ -153,8 +155,8 @@ const ProjectArch = ({ architecture }) => {
 
 const ProjectTerminal = ({ terminalData, terminalTitle }) => {
   return (
-    <div className="bg-black rounded-xl p-4 hidden min-[460px]:block">
-      <div className="flex items-center">
+    <div className="bg-black rounded-xl p-4 hidden min-[460px]:block group  ">
+      <div className="flex items-center ">
         <div className="flex gap-2 p-4 ">
           <span className="rounded-[50%] bg-red-300 inline-block w-2 h-2 "></span>
           <span className="rounded-[50%] bg-yellow-300 inline-block w-2 h-2"></span>
@@ -163,7 +165,7 @@ const ProjectTerminal = ({ terminalData, terminalTitle }) => {
         <h2 className=" text-green-500">{terminalTitle}</h2>
       </div>
       <div className="p-2">
-        <pre className="text-wrap text-sm text-gray-300 font-sora">
+        <pre className="text-wrap text-sm text-gray-300 font-sora group-hover:animate-pulse">
           {terminalData}
         </pre>
       </div>
@@ -195,7 +197,7 @@ const TechSection = ({ techDecisions }) => {
 const TechDecisionsComp = ({ Icon, title, info }) => {
   return (
     <div
-      className="flex items-center gap-2 border border-orange-400 p-2 rounded-xl hover:bg-orange-400/50 hover:text-white hover:border-gray-400 transition-colors duration-300 ease-in-out
+      className="flex items-center gap-2 border border-orange-400 p-2 rounded-xl hover:bg-orange-400/50 hover:text-white hover:scale-105 transition-all duration-300 ease-in-out
 "
     >
       <Icon className="text-2xl text-orange-400 min-[820px]:text-4xl" />
