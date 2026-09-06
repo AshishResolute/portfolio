@@ -10,15 +10,16 @@ import { RiUserFollowLine } from "react-icons/ri";
 import { AiTwotoneLike } from "react-icons/ai";
 import { MdMarkEmailRead } from "react-icons/md";
 import { SiVitest } from "react-icons/si";
-import { FiLock } from "react-icons/fi";
+import { FiLock, FiServer } from "react-icons/fi";
 import { FiRefreshCw } from "react-icons/fi";
 import { FiCheckCircle } from "react-icons/fi";
 import { FiLayout } from "react-icons/fi";
 import { FiDatabase } from "react-icons/fi";
 import { FiGitBranch } from "react-icons/fi";
-import { SiJsonwebtokens } from "react-icons/si";
+import { SiUpstash, SiPrisma } from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaUserShield } from "react-icons/fa6";
+import { FaLock, FaSyncAlt, FaReact } from "react-icons/fa";
 const SocialBuzzTerminal = `POST   /api/auth/login
 {
         "success": true,
@@ -35,6 +36,33 @@ const SocialBuzzTerminal = `POST   /api/auth/login
         }
 }`;
 
+const BankApiTerminal = `POST  /api/auth/login
+        {
+          "email": "user@bank.com",
+          "password": "••••••••"
+        }
+
+        429 Too Many Requests
+        {
+          "error": "Rate limit exceeded",
+          "retryAfter": 30
+        }`;
+
+const JobTrackerTerminal = `POST /api/applications
+    {
+            "company": "Razorpay",
+            "role": "Backend Engineer",
+            "status": "applied"
+    }
+
+    201 Created
+    {
+            "id": "app_4471",
+            "company": "Razorpay",
+            "role": "Backend Engineer",
+            "status": "applied",
+            "createdAt": "2026-09-02T10:15:00Z"
+    }`;
 export const projects = [
   {
     icon: TbUsersGroup,
@@ -77,7 +105,23 @@ export const projects = [
     ],
     terminalTitle: "Login Response (200 OK)",
     terminalData: SocialBuzzTerminal,
-    techDecisions:[{icon:FaUserShield,title:"Refresh Token Family",info:"Self-referencing foreign key, bcrypt-hashed tokens, full revocation on reuse detection"},{icon:DiRedis,title:"Cache-aside Feed latency win",info:"Redis cache layer reduced feed latency from 170ms to 5ms"},{icon:TbBrandTypescript,title:"Typescript migration + tests + Docker + CI",info:"Full TypeScript migration, 80% test coverage with Jest, Dockerized services, GitHub Actions CI"}]
+    techDecisions: [
+      {
+        icon: FaUserShield,
+        title: "Refresh Token Family",
+        info: "Self-referencing foreign key, bcrypt-hashed tokens, full revocation on reuse detection",
+      },
+      {
+        icon: DiRedis,
+        title: "Cache-aside Feed latency win",
+        info: "Redis cache layer reduced feed latency from 170ms to 5ms",
+      },
+      {
+        icon: TbBrandTypescript,
+        title: "Typescript migration + tests + Docker + CI",
+        info: "Full TypeScript migration, 80% test coverage with Jest, Dockerized services, GitHub Actions CI",
+      },
+    ],
   },
   {
     icon: PiPiggyBankFill,
@@ -127,10 +171,29 @@ export const projects = [
       "Routes",
       "Postgres",
     ],
+    terminalTitle: "Rate Limit Response (429)",
+    terminalData: BankApiTerminal,
+    techDecisions: [
+      {
+        icon: FaLock,
+        title: "Row-Level Locking",
+        info: "PostgreSQL row-level locks prevent race conditions on concurrent balance updates and transfers",
+      },
+      {
+        icon: SiUpstash,
+        title: "Redis Rate Limiting",
+        info: "Upstash Redis + Lua scripts enforce per-user rate limits atomically, no race conditions on the counter itself",
+      },
+      {
+        icon: FaSyncAlt,
+        title: "Refresh Token Rotation",
+        info: "JWT refresh rotation keeps sessions secure and revocable, backed by 70%+ Jest/Supertest coverage",
+      },
+    ],
   },
   {
     icon: IoStatsChart,
-    title: "Job Tracker",
+    title: "Job-Tracker",
     description:
       "Full-stack job application tracker — React frontend backed by a Node/TS/Postgres API.",
     tags: [
@@ -161,7 +224,7 @@ export const projects = [
         feat: "Node.js + TypeScript + PostgreSQL + Prisma backend, deployed on Render",
       },
       {
-        icon: FiGitBranch,
+        icon: FiServer,
         feat: "Full-stack deployment pipeline (separate frontend/backend hosting, connected via API)",
       },
     ],
@@ -170,6 +233,25 @@ export const projects = [
       "Backend(Express/Ts)",
       "Prisma",
       "Postgres",
+    ],
+    terminalTitle: "Create Application (201 Created)",
+    terminalData: JobTrackerTerminal,
+    techDecisions: [
+      {
+        icon: FaReact,
+        title: "React + Vercel Frontend",
+        info: "Client deployed separately on Vercel, decoupled from the API for independent scaling and deploys",
+      },
+      {
+        icon: SiPrisma,
+        title: "Prisma + PostgreSQL",
+        info: "Typed schema and migrations via Prisma, backing a Node.js/TypeScript API deployed on Render",
+      },
+      {
+        icon: TbBrandTypescript,
+        title: "First Full-Stack TypeScript Build",
+        info: "First project tying a typed frontend and backend together end-to-end, from schema to UI",
+      },
     ],
   },
 ];

@@ -195,7 +195,7 @@ const TechSection = ({ techDecisions }) => {
 const TechDecisionsComp = ({ Icon, title, info }) => {
   return (
     <div
-      className="flex items-center gap-2 border border-orange-400 p-2 rounded-xl hover:bg-orange-300/50 hover:text-white hover:border-gray-400 transition-colors duration-300 ease-in-out
+      className="flex items-center gap-2 border border-orange-400 p-2 rounded-xl hover:bg-orange-400/50 hover:text-white hover:border-gray-400 transition-colors duration-300 ease-in-out
 "
     >
       <Icon className="text-2xl text-orange-400 min-[820px]:text-4xl" />
