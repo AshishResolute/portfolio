@@ -1,6 +1,6 @@
 import { ImGithub } from "react-icons/im";
 import { projects } from "../data/projects.data.js";
-
+import { Link } from "react-router";
 export const Projects = () => {
   return (
     <div className=" p-8 space-y-8 text-[#6b6b68]" id="projects">
@@ -46,7 +46,8 @@ const ProjectCard = ({
   tags,
 }) => {
   return (
-    <a href={githubSrc}>
+    // <a href={githubSrc}>
+    <Link to={`/project/${title.toLowerCase()}`}>
       <div
         key={name}
         className="bg-black border p-4 pb-5 rounded-2xl space-y-1  md:min-h-52 min-h-[450px]:h-56  shadow-xl shadow-black/50 hover:shadow-gray-300 transition transform hover:-translate-y-1 duration-400"
@@ -72,6 +73,7 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-    </a>
+    {/* </a> */}
+    </Link>
   );
 };
