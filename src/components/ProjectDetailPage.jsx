@@ -8,7 +8,6 @@ export const ProjectDetailPage = () => {
   return (
     <div className="font-sora p-5 text-[#6b6b68] ">
       <Link to="/" className="p-8">
-        {" "}
         ← Back to Home
       </Link>
       <ProjectPageHeader
