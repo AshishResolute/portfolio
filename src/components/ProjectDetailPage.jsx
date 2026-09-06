@@ -1,12 +1,16 @@
 import { projects } from "../data/projects.data.js";
 import { useParams } from "react-router";
 import { ImTree } from "react-icons/im";
-
+import { Link } from "react-router";
 export const ProjectDetailPage = () => {
   const { slug } = useParams();
   const data = projects.find(({ title }) => title.toLowerCase() === slug);
   return (
     <div className="font-sora p-5 text-[#6b6b68] ">
+      <Link to="/" className="p-8">
+        {" "}
+        ← Back to Home
+      </Link>
       <ProjectPageHeader
         title={data.title}
         description={data.description}
